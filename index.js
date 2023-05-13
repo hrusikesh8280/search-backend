@@ -12,12 +12,10 @@ app.use(cors())
 app.use("/",adRouter)
 
 
-app.get("/",(req,res)=>{
-    res.send("welcome to search backend")
-})
 
 
-app.listen(process.env.port,async()=>{
+
+app.listen(7000,async()=>{
 
     try{
         await connection
@@ -26,5 +24,5 @@ app.listen(process.env.port,async()=>{
         console.log(err);
     }
 
-    console.log(`Server is running at ${process.env.port}`)
+    console.log("Server is running at 7000")
 })
